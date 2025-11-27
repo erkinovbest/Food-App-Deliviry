@@ -7,18 +7,24 @@ export const StyleCustomers = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 16px;
   }
+
   .orders-search input {
     background-color: #fff;
-    height: 35px;
+    height: 38px;
     width: 100%;
     max-width: 860px;
     box-sizing: border-box;
+    padding: 0 10px;
+    border-radius: 6px;
   }
+
   table thead th:first-child {
     border-top-left-radius: 12px;
   }
+
   table thead th:last-child {
     border-top-right-radius: 12px;
   }
@@ -26,24 +32,16 @@ export const StyleCustomers = styled.div`
   .select {
     width: 68px;
   }
+
   .selectId {
     margin-right: 12px;
   }
+
   .shop {
     position: relative;
     display: inline-block;
   }
-  .img-with {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .img-with img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-  }
+
   .shop .badge {
     position: absolute;
     top: -5px;
@@ -54,12 +52,33 @@ export const StyleCustomers = styled.div`
     padding: 2px 5px;
     border-radius: 50%;
   }
+
+  .img-with {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-with img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0.95;
+  }
+
+  .img-with img:hover {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
   .profile {
     display: flex;
     align-items: center;
     gap: 12px;
     flex-wrap: wrap;
   }
+
   .main-header {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
@@ -68,52 +87,75 @@ export const StyleCustomers = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
-    gap: 10px;
+    gap: 12px;
   }
+
   .order-header-btns input {
     height: 15px;
   }
+
   .orders-list {
     margin-top: 20px;
     width: 100%;
     overflow-x: auto;
   }
+
   .orders-list table {
     border-collapse: separate;
-    border-spacing: 0 4px;
-    color: #fff;
+    border-spacing: 0 6px;
     width: 100%;
-    min-width: 600px;
+    min-width: 650px;
   }
+
   table {
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
   }
+
   table thead {
     background-color: #00b074;
+    color: #fff;
   }
+
   table tbody {
     color: #000;
     background-color: #fff;
   }
+
   tbody tr {
-    margin-top: 20px;
-    margin-left: 20px;
+    transition: background 0.2s ease;
   }
+
+  tbody tr:hover {
+    background-color: #f3f3f3;
+  }
+
+  tbody td {
+    padding: 20px;
+    vertical-align: middle;
+  }
+
   tbody td button {
     background-color: #fff1ee;
     color: #ff6d4c;
     height: 35px;
     width: 125px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
   }
-  tbody td {
-    padding: 20px;
+
+  tbody td button:hover {
+    opacity: 0.8;
   }
+
   thead th {
     padding: 20px;
   }
 
+  /* RESPONSIVE */
   @media (max-width: 1200px) {
     .orders-search input {
       max-width: 600px;
@@ -122,7 +164,7 @@ export const StyleCustomers = styled.div`
       max-width: 350px;
     }
     tbody td button {
-      width: 100px;
+      width: 105px;
     }
   }
 
@@ -144,13 +186,13 @@ export const StyleCustomers = styled.div`
       max-width: 250px;
     }
     tbody td {
-      padding: 10px;
+      padding: 12px;
     }
     thead th {
-      padding: 10px;
+      padding: 12px;
     }
     tbody td button {
-      width: 80px;
+      width: 85px;
       height: 30px;
     }
   }

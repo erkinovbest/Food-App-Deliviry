@@ -11,10 +11,13 @@ export const StyledSelectWrapper = styled(FormControl)`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
   @media (min-width: 1025px) {
-    margin-top: 4px;
+    margin-top: 8px;
   }
+
+  /* Optional: smoother transitions for resizing */
+  transition: all 0.25s ease;
 `;

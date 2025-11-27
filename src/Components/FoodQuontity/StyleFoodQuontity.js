@@ -8,12 +8,18 @@ const StyleFoodQuantity = styled.div`
 
   .box {
     background-color: #fff;
-    padding: 20px;
+    padding: 24px;
     border-radius: 12px;
     width: 100%;
     max-width: 400px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
   }
 
   #box-h2 {
@@ -26,7 +32,7 @@ const StyleFoodQuantity = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 20px;
   }
 
@@ -41,14 +47,17 @@ const StyleFoodQuantity = styled.div`
     font-size: 20px;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  #minusBtn {
-    background-color: #ff4d4f;
+  #minusBtn:hover {
+    transform: scale(1.1);
+    background-color: #ff7875;
   }
 
-  #plusBtn {
-    background-color: #1677ff;
+  #plusBtn:hover {
+    transform: scale(1.1);
+    background-color: #4096ff;
   }
 
   .btn-dev input {
@@ -62,31 +71,48 @@ const StyleFoodQuantity = styled.div`
 
   #addBtn {
     width: 100%;
-    height: 35px;
+    height: 40px;
     padding: 10px 0;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
+    background-color: #00b074;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  #addBtn:hover {
+    background-color: #00995f;
   }
 
   @media (max-width: 480px) {
     .box {
-      padding: 15px;
+      padding: 16px;
       width: 85%;
     }
+
     #box-h2 {
       font-size: 1rem;
     }
+
     .btn-dev input {
       width: 50px;
       height: 35px;
       font-size: 16px;
     }
+
     #minusBtn,
     #plusBtn {
       width: 30px;
       height: 30px;
       font-size: 18px;
+    }
+
+    #addBtn {
+      height: 35px;
+      font-size: 14px;
     }
   }
 `;

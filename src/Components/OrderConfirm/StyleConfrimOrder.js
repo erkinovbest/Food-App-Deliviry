@@ -8,15 +8,23 @@ export const StyleOrderConfirm = styled.div`
   padding: 20px;
   height: auto;
   margin: 20px auto;
-  border: 1px solid gray;
+  border: 1px solid #ccc;
   border-radius: 12px;
   box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 
   img {
     object-fit: cover;
     border-radius: 12px;
     width: 100%;
     height: 150px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
 
     @media screen and (max-width: 480px) {
       height: 120px;
@@ -24,16 +32,17 @@ export const StyleOrderConfirm = styled.div`
   }
 
   #container-main {
-    margin-top: 8px;
+    margin-top: 12px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   #container-main h4 {
-    font-family: sans-serif;
     margin: 0;
     font-size: 1rem;
+    font-weight: 500;
 
     @media screen and (max-width: 480px) {
       font-size: 0.9rem;
@@ -43,6 +52,7 @@ export const StyleOrderConfirm = styled.div`
   #container-main span {
     color: green;
     font-size: 1rem;
+    font-weight: 600;
 
     @media screen and (max-width: 480px) {
       font-size: 0.9rem;
@@ -50,21 +60,31 @@ export const StyleOrderConfirm = styled.div`
   }
 
   button {
-    margin-top: 35px;
+    margin-top: 30px;
     width: 100%;
-    height: 35px;
-    max-width: 100%;
-    padding: 10px;
+    height: 40px;
     font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #00b074;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background-color: #00995f;
+    }
 
     @media screen and (max-width: 480px) {
       font-size: 0.9rem;
-      padding: 10px;
+      height: 35px;
+      padding: 8px;
     }
   }
 
   #cart-container {
-    margin-top: 10px;
+    margin-top: 12px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -72,11 +92,11 @@ export const StyleOrderConfirm = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 15px;
+    padding: 16px;
   }
 
   @media screen and (max-width: 480px) {
-    padding: 20px;
+    padding: 16px;
     border-radius: 10px;
   }
 `;
