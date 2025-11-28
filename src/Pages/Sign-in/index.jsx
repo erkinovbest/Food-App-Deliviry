@@ -237,7 +237,7 @@ function SignIn() {
                     >
                       <a href="/sign-up">{t('dontHaveAcc')}</a>
                     </p>
-                    <Button type="submit" color="error" variant="contained">
+                    <Button type="submit" color="" variant="contained">
                       {t('login')}
                     </Button>
                   </div>

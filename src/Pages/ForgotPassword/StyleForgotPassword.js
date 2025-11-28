@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import signInBg from '../../assets/sign-in.jpg';
+import signInBg from '../../assets/food.jpg';
 
 export const StyleForgotPassword = styled.div`
   margin: 0;

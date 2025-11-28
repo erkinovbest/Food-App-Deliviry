@@ -41,10 +41,14 @@ export const StyleSignIn = styled.div`
   }
 
   .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 300px;
     width: 100%;
     border-radius: 12px;
     padding: 24px;
-    background-color: #fff;
+    background-color: #cbcbcbff;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -80,6 +84,9 @@ export const StyleSignIn = styled.div`
 
     .form {
       padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .inputs {
