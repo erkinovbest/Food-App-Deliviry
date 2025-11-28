@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import signInBg from '../../assets/sign-in.jpg';
+import signInBg from '../../assets/food.jpg';
 
 export const StyleSignIn = styled.div`
   margin: 0;
@@ -10,7 +10,7 @@ export const StyleSignIn = styled.div`
   height: 100vh;
   position: absolute;
   background-image: url(${signInBg});
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
